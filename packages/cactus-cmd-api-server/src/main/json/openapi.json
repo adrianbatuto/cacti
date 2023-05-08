@@ -74,6 +74,10 @@
             "PrometheusExporterMetricsResponse": {
                 "type": "string",
                 "nullable": false
+            },
+            "GetOpenApiSpecV1EndpointResponse": {
+                "type": "string",
+                "nullable": false
             }
         }
     },
@@ -128,6 +132,31 @@
                     }
                 }
             }
+          },
+          "/api/v1/api-server/get-open-api-spec-v1-endpoint": {
+            "post": {
+                 "description": "Returns the openapi.json document of specific plugin.",
+                 "x-hyperledger-cactus": {
+                     "http": {
+                         "verbLowerCase": "get",
+                         "path": "/api/v1/api-server/get-open-api-spec-v1-endpoint"
+                     }
+                 },
+                  "operationId": "getOpenApiSpecV1Endpoint",
+                 "parameters": [],
+                 "responses": {
+                     "200": {
+                         "description": "OK",
+                         "content": {
+                             "application/json": {
+                                 "schema": {
+                                   "$ref": "#/components/schemas/GetOpenApiSpecV1EndpointResponse"
+                                 }
+                             }
+                         }
+                     }
+                 } 
+             }
+          }
         }
     }
-}

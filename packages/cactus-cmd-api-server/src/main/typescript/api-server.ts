@@ -49,7 +49,6 @@ import {
 
 import { ICactusApiServerOptions } from "./config/config-service";
 import OAS from "../json/openapi.json";
-// import { OpenAPIV3 } from "express-openapi-validator/dist/framework/types";
 
 import { PrometheusExporter } from "./prometheus-exporter/prometheus-exporter";
 import { AuthorizerFactory } from "./authzn/authorizer-factory";

@@ -135,6 +135,35 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
+         * Returns the openapi.json document of specific plugin.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenApiSpecV1Endpoint: async (options: any = {}): Promise<RequestArgs> => {
+            const localVarPath = `/api/v1/api-server/get-open-api-spec-v1-endpoint`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+
+    
+            setSearchParams(localVarUrlObj, localVarQueryParameter, options.query);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
          * 
          * @summary Get the Prometheus Metrics
          * @param {*} [options] Override http request option.
@@ -185,6 +214,15 @@ export const DefaultApiFp = function(configuration?: Configuration) {
             return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
         },
         /**
+         * Returns the openapi.json document of specific plugin.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async getOpenApiSpecV1Endpoint(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.getOpenApiSpecV1Endpoint(options);
+            return createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration);
+        },
+        /**
          * 
          * @summary Get the Prometheus Metrics
          * @param {*} [options] Override http request option.
@@ -214,6 +252,14 @@ export const DefaultApiFactory = function (configuration?: Configuration, basePa
             return localVarFp.getHealthCheckV1(options).then((request) => request(axios, basePath));
         },
         /**
+         * Returns the openapi.json document of specific plugin.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        getOpenApiSpecV1Endpoint(options?: any): AxiosPromise<string> {
+            return localVarFp.getOpenApiSpecV1Endpoint(options).then((request) => request(axios, basePath));
+        },
+        /**
          * 
          * @summary Get the Prometheus Metrics
          * @param {*} [options] Override http request option.
@@ -241,6 +287,16 @@ export class DefaultApi extends BaseAPI {
      */
     public getHealthCheckV1(options?: any) {
         return DefaultApiFp(this.configuration).getHealthCheckV1(options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Returns the openapi.json document of specific plugin.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof DefaultApi
+     */
+    public getOpenApiSpecV1Endpoint(options?: any) {
+        return DefaultApiFp(this.configuration).getOpenApiSpecV1Endpoint(options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

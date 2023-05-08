@@ -42,4 +42,17 @@ export class GrpcServerApiServer extends default_service.org.hyperledger.cactus
     const res = new default_service.org.hyperledger.cactus.cmd_api_server.GetPrometheusMetricsV1Response();
     callback(null, res);
   }
+
+  GetOpenApiSpecV1Endpoint(
+    call: ServerUnaryCall<
+      Empty,
+      default_service.org.hyperledger.cactus.cmd_api_server.GetOpenApiSpecV1EndpointResponse
+    >,
+    callback: requestCallback<
+      default_service.org.hyperledger.cactus.cmd_api_server.GetOpenApiSpecV1EndpointResponse
+    >,
+  ): void {
+    const res = new default_service.org.hyperledger.cactus.cmd_api_server.GetOpenApiSpecV1EndpointResponse();
+    callback(null, res);
+  }
 }
