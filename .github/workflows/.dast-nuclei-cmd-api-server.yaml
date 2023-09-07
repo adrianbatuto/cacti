@@ -43,7 +43,7 @@ jobs:
       - run: go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@v2.6.3
 
       - run: nuclei --version
-
+      - run: yarn install
       - run: yarn configure
 
       - name: Create URLs file for Nuclei
