@@ -9,6 +9,8 @@ ARG CORDA_TOOLS_SHELL_CLI_VERSION=4.8
 WORKDIR /
 
 
+
+
 RUN apk update
 
 # Install dependencies of Docker Compose
