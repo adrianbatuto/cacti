@@ -26,7 +26,7 @@ jobs:
       - name: Set up NodeJS v16.9.1
         uses: actions/setup-node@v3.6.0
         with:
-          node-version: v16.9.1
+          node-version: v16.14.2
 
       - name: Install jq
         run: sudo apt update && sudo apt install -y jq
