@@ -16,7 +16,7 @@ import { registerWebServiceEndpoint } from "@hyperledger/cactus-core";
 
 import OAS from "../../json/openapi.json";
 import { PluginKeychainVault } from "../plugin-keychain-vault";
-import { GetKeychainEntryResponse } from "../generated/openapi/typescript-axios";
+import { GetKeychainEntryResponseV1 } from "../generated/openapi/typescript-axios";
 
 export interface IGetKeychainEntryEndpointV1Options {
   logLevel?: LogLevelDesc;
@@ -94,7 +94,7 @@ export class GetKeychainEntryEndpointV1 implements IWebServiceEndpoint {
     try {
       this.log.debug(`${tag} %o`, req.body);
       const value = await this.plugin.get(req.body.key);
-      const resBody: GetKeychainEntryResponse = {
+      const resBody: GetKeychainEntryResponseV1 = {
         key: req.body.key,
         value: value as string,
       };
