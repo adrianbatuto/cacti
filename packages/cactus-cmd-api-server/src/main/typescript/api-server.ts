@@ -385,6 +385,7 @@ export class ApiServer {
       : pluginImport.packageName;
 
     const instanceId = pluginImport.options.instanceId;
+    this.log.debug("checking path" + this.pluginsPath);
     const pluginPackageDir = path.join(this.pluginsPath, instanceId);
     // version of the npm package
     const pluginVersion = pluginImport.options.version
