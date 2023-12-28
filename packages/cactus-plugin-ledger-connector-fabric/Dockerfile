@@ -1,4 +1,4 @@
-FROM ghcr.io/hyperledger/cactus-cmd-api-server:2023-12-21-f8f6bcb
+FROM ghcr.io/hyperledger/cactus-cmd-api-server:2021-08-15--refactor-1222
 
 RUN npm install -g yarn@1.22.17
 
