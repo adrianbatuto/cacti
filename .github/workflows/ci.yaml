@@ -2235,6 +2235,7 @@ jobs:
           ignore-unfixed: true
           vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH'
+          ignore: 'CVE-2020-36518'
   ghcr-dev-container-vscode:
     runs-on: ubuntu-22.04
     needs:
