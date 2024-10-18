@@ -1,6 +1,6 @@
 {
-  "name": "@hyperledger/cactus-plugin-ledger-connector-corda",
-  "version": "2.0.0",
+  "name": "@adrianbatuto/cactus-plugin-ledger-connector-corda",
+  "version": "2.0.0-test2",
   "description": "Allows Cactus nodes to connect to a Corda ledger.",
   "keywords": [
     "Hyperledger",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hyperledger/cacti.git"
+    "url": "git+https://github.com/adrianbatuto/cacti.git"
   },
   "license": "Apache-2.0",
   "author": {
