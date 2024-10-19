@@ -2,7 +2,7 @@
   "packages": [
     "packages/cactus-plugin-ledger-connector-corda"
   ],
-  "version": "2.0.0",
+  "version": "2.0.1-test",
   "npmClient": "yarn",
   "useWorkspaces": "true",
   "command": {
