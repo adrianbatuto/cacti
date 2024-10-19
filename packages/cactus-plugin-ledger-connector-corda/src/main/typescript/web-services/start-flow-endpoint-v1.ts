@@ -40,7 +40,7 @@ export class StartFlowEndpointV1 implements IWebServiceEndpoint {
 
   constructor(public readonly options: IStartFlowEndpointV1Options) {
     const fnTag = `${this.className}#constructor()`;
-    console.log("sample change");
+    console.log("sample change1");
     Checks.truthy(options, `${fnTag} options`);
     Checks.truthy(options.connector, `${fnTag} options.connector`);
     Checks.nonBlankString(options.apiUrl, `${fnTag} options.apiUrl`);
