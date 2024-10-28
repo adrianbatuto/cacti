@@ -1,6 +1,6 @@
 {
   "name": "@hyperledger/cactus-plugin-persistence-fabric",
-  "version": "2.0.0-test",
+  "version": "3.0.0-test",
   "description": "Persistence plugin for Fabric ledgers to store data into a database.",
   "keywords": [
     "Hyperledger",
@@ -62,10 +62,10 @@
     "watch": "npm-watch"
   },
   "dependencies": {
-    "@hyperledger/cactus-common": "^2.0.0-test",
-    "@hyperledger/cactus-core": "^2.0.0-test",
-    "@hyperledger/cactus-core-api": "^2.0.0-test",
-    "@hyperledger/cactus-plugin-ledger-connector-fabric": "^2.0.0-test",
+    "@hyperledger/cactus-common": "^3.0.0-test",
+    "@hyperledger/cactus-core": "^3.0.0-test",
+    "@hyperledger/cactus-core-api": "^3.0.0-test",
+    "@hyperledger/cactus-plugin-ledger-connector-fabric": "^3.0.0-test",
     "async-mutex": "0.4.0",
     "axios": "1.7.7",
     "pg": "8.8.0",
@@ -73,9 +73,9 @@
     "uuid": "10.0.0"
   },
   "devDependencies": {
-    "@hyperledger/cactus-cmd-api-server": "^2.0.0-test",
-    "@hyperledger/cactus-plugin-keychain-memory": "^2.0.0-test",
-    "@hyperledger/cactus-test-tooling": "^2.0.0-test",
+    "@hyperledger/cactus-cmd-api-server": "^3.0.0-test",
+    "@hyperledger/cactus-plugin-keychain-memory": "^3.0.0-test",
+    "@hyperledger/cactus-test-tooling": "^3.0.0-test",
     "@openapitools/openapi-generator-cli": "2.7.0",
     "@types/express": "5.0.0",
     "@types/pg": "8.6.5",

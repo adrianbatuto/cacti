@@ -1,6 +1,6 @@
 {
     "name": "@hyperledger/cacti-plugin-weaver-driver-fabric",
-    "version": "2.0.0-test",
+    "version": "3.0.0-test",
     "description": "Driver Server for communication with a Fabric Network as part of weaver data sharing protocol",
     "keywords": [
         "Hyperledger",
