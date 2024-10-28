@@ -1,5 +1,5 @@
 {
-  "name": "@hyperledger/cactus-plugin-ledger-connector-corda",
+  "name": "@adrianbatuto/cactus-plugin-ledger-connector-corda",
   "version": "2.0.0",
   "description": "Allows Cactus nodes to connect to a Corda ledger.",
   "keywords": [
