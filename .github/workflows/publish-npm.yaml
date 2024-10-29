@@ -34,6 +34,7 @@ jobs:
     - name: ./tools/ci.sh
       run: ./tools/ci.sh
       env:
+        YARN_ENABLE_IMMUTABLE_INSTALLS: false
         DEV_BUILD_DISABLED: false
         FULL_BUILD_DISABLED: false
         JEST_TEST_RUNNER_DISABLED: true
