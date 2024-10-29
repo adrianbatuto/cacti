@@ -1,6 +1,6 @@
 {
   "name": "@hyperledger/cactus-verifier-client",
-  "version": "2.0.0-test",
+  "version": "2.0.0-test-provenance",
   "description": "Verifier cactus client library to communicate with validators through socket.io",
   "keywords": [
     "Hyperledger",
@@ -42,8 +42,8 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@hyperledger/cactus-common": "^2.0.0-test",
-    "@hyperledger/cactus-core-api": "^2.0.0-test"
+    "@hyperledger/cactus-common": "^2.0.0-test-provenance",
+    "@hyperledger/cactus-core-api": "^2.0.0-test-provenance"
   },
   "devDependencies": {
     "@hyperledger/cactus-api-client": "^2.0.0-test",
