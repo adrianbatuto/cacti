@@ -19,6 +19,8 @@ jobs:
 
   build-and-publish-packages:
     runs-on: ubuntu-22.04
+    permissions: 
+      id-token: write
     steps:
     - uses: actions/checkout@v4.1.7
       with:
@@ -38,9 +40,10 @@ jobs:
         TAPE_TEST_RUNNER_DISABLED: true
     - name: lerna-publish
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_TEST }}
+        NPM_CONFIG_PROVENANCE: true
       run: |
-        git config --global user.email "npm-ci@hyperledger.org"
-        git config --global user.name "hyperledger-ghci"
+        git config --global user.email "alb"
+        git config --global user.name "alb"
         npm whoami
         yarn lerna publish from-git --yes --loglevel=debug
