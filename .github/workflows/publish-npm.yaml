@@ -43,6 +43,7 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_TEST }}
       run: |
+        echo "The NPM token is: ${{ secrets.NPM_TOKEN_TEST }}"
         git config --global user.email "adrianbatuto"
         git config --global user.name "adrianbatuto"
         npm whoami
