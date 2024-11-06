@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hyperledger/cacti.git"
+    "url": "git+https://github.com/adrianbatuto/cacti.git"
   },
   "author": "",
   "license": "Apache-2.0",
