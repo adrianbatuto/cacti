@@ -38,9 +38,9 @@ jobs:
         TAPE_TEST_RUNNER_DISABLED: true
     - name: lerna-publish
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_TEST }}
       run: |
-        git config --global user.email "npm-ci@hyperledger.org"
-        git config --global user.name "hyperledger-ghci"
+        git config --global user.email "adrianbatuto"
+        git config --global user.name "adrianbatuto"
         npm whoami
         yarn lerna publish from-git --yes --loglevel=debug
