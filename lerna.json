@@ -1,20 +1,6 @@
 {
   "packages": [
-    "packages/cactus-*",
-    "examples/cactus-*",
-    "extensions/cactus-*",
-    "packages/cacti-*",
-    "examples/cacti-*",
-    "extensions/cacti-*",
-    "weaver/common/protos-js",
-    "weaver/sdks/fabric/interoperation-node-sdk",
-    "weaver/sdks/besu/node",
-    "weaver/core/drivers/fabric-driver",
-    "weaver/core/identity-management/iin-agent",
-    "weaver/samples/fabric/fabric-cli",
-    "weaver/samples/besu/besu-cli",
-    "weaver/samples/besu/simpleasset",
-    "weaver/samples/besu/simplestate"
+    "packages/cactus-*"
   ],
   "version": "2.0.2-onepackage",
   "npmClient": "yarn",
