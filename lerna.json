@@ -2,7 +2,7 @@
   "packages": [
     "packages/cactus-*"
   ],
-  "version": "2.0.2-onepackage",
+  "version": "2.0.3-onepackage",
   "npmClient": "yarn",
   "useWorkspaces": "true",
   "command": {
