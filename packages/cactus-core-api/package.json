@@ -1,5 +1,5 @@
 {
-  "name": "@hyperledger/cactus-core-api",
+  "name": "@adrianbatuto/cactus-core-api",
   "version": "2.0.0",
   "description": "Contains type definitions/interfaces for the kernel of the codebase. Kept separate from the implementation so that it is easier to use it as a dependency.",
   "keywords": [
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hyperledger/cacti.git"
+    "url": "git+https://github.com/adrianbatuto/cacti.git"
   },
   "license": "Apache-2.0",
   "author": {
