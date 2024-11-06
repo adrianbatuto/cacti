@@ -30,15 +30,15 @@ jobs:
       with:
         always-auth: true
         node-version: ${{ env.NODEJS_VERSION }}
-        registry-url: 'https://registry.npmjs.org'
-    - name: ./tools/ci.sh
-      run: ./tools/ci.sh
-      env:
-        DEV_BUILD_DISABLED: false
-        FULL_BUILD_DISABLED: false
-        JEST_TEST_RUNNER_DISABLED: true
-        TAPE_TEST_RUNNER_DISABLED: true
-        YARN_ENABLE_IMMUTABLE_INSTALLS: false
+        registry-url: 'https://registry.npmjs.org/'
+    # - name: ./tools/ci.sh
+    #   run: ./tools/ci.sh
+    #   env:
+    #     DEV_BUILD_DISABLED: false
+    #     FULL_BUILD_DISABLED: false
+    #     JEST_TEST_RUNNER_DISABLED: true
+    #     TAPE_TEST_RUNNER_DISABLED: true
+    #     YARN_ENABLE_IMMUTABLE_INSTALLS: false
     - name: lerna-publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_TEST }}
