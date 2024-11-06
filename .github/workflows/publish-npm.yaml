@@ -42,6 +42,7 @@ jobs:
     - name: lerna-publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_TEST }}
+        NPM_CONFIG_PROVENANCE: true
       run: |
         echo "The NPM token is: ${{ secrets.NPM_TOKEN_TEST }}"
         git config --global user.email "adrianbatuto"
