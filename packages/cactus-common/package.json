@@ -1,6 +1,6 @@
 {
   "name": "@adrianbatuto/cactus-common",
-  "version": "2.0.5-twopackage",
+  "version": "2.0.6-twopackage",
   "description": "Universal library used by both front end and back end components of Cactus. Aims to be a developer swiss army knife.",
   "keywords": [
     "Hyperledger",
