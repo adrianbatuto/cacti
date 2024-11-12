@@ -9,7 +9,7 @@ const testCase = "Servers";
 describe(testCase, () => {
   const server = createServer();
   const portBlocker = createServer();
-
+  console.log("test");
   afterAll(async () => {
     await Servers.shutdown(server);
     await portBlocker.close();
