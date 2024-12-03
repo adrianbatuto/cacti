@@ -12,6 +12,77 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@adrianbatuto/cactus-common@workspace:packages/cactus-common":
+  version: 0.0.0-use.local
+  resolution: "@adrianbatuto/cactus-common@workspace:packages/cactus-common"
+  dependencies:
+    "@grpc/grpc-js": "npm:1.11.3"
+    "@types/json-stable-stringify": "npm:1.0.33"
+    "@types/sanitize-html": "npm:2.9.5"
+    "@types/secp256k1": "npm:4.0.3"
+    "@types/uuid": "npm:10.0.0"
+    fast-safe-stringify: "npm:2.1.1"
+    json-stable-stringify: "npm:1.0.1"
+    key-encoder: "npm:2.0.3"
+    loglevel: "npm:1.7.1"
+    loglevel-plugin-prefix: "npm:0.8.4"
+    run-time-error-cjs: "npm:1.4.0"
+    sanitize-html: "npm:2.12.1"
+    secp256k1: "npm:4.0.3"
+    sha3: "npm:2.1.4"
+    uuid: "npm:10.0.0"
+  languageName: unknown
+  linkType: soft
+
+"@adrianbatuto/cactus-core-api@workspace:packages/cactus-core-api":
+  version: 0.0.0-use.local
+  resolution: "@adrianbatuto/cactus-core-api@workspace:packages/cactus-core-api"
+  dependencies:
+    "@bufbuild/protobuf": "npm:1.10.0"
+    "@connectrpc/connect": "npm:1.4.0"
+    "@grpc/grpc-js": "npm:1.11.3"
+    "@grpc/proto-loader": "npm:0.7.13"
+    "@hyperledger/cactus-common": "npm:2.0.0"
+    "@types/express": "npm:5.0.0"
+    "@types/google-protobuf": "npm:3.15.5"
+    ajv: "npm:8.17.1"
+    ajv-draft-04: "npm:1.0.0"
+    ajv-formats: "npm:3.0.1"
+    axios: "npm:1.7.7"
+    google-protobuf: "npm:3.21.4"
+    grpc-tools: "npm:1.12.4"
+    grpc_tools_node_protoc_ts: "npm:5.3.3"
+    make-dir-cli: "npm:3.1.0"
+    npm-run-all: "npm:4.1.5"
+    rxjs: "npm:7.8.1"
+    socket.io: "npm:4.6.2"
+    typescript-optional: "npm:2.0.1"
+  languageName: unknown
+  linkType: soft
+
+"@adrianbatuto/cactus-core@workspace:packages/cactus-core":
+  version: 0.0.0-use.local
+  resolution: "@adrianbatuto/cactus-core@workspace:packages/cactus-core"
+  dependencies:
+    "@hyperledger/cactus-common": "npm:2.0.0"
+    "@hyperledger/cactus-core-api": "npm:2.0.0"
+    "@types/body-parser": "npm:1.19.4"
+    "@types/express": "npm:5.0.0"
+    "@types/http-errors": "npm:2.0.2"
+    body-parser: "npm:1.20.3"
+    express: "npm:4.21.0"
+    express-jwt-authz: "npm:2.4.1"
+    express-openapi-validator: "npm:5.2.0"
+    http-errors: "npm:2.0.0"
+    http-errors-enhanced-cjs: "npm:2.0.1"
+    node-mocks-http: "npm:1.14.0"
+    run-time-error-cjs: "npm:1.4.0"
+    safe-stable-stringify: "npm:2.4.3"
+    typescript-optional: "npm:2.0.1"
+    uuid: "npm:10.0.0"
+  languageName: unknown
+  linkType: soft
+
 "@ampproject/remapping@npm:^2.2.0":
   version: 2.3.0
   resolution: "@ampproject/remapping@npm:2.3.0"
@@ -2811,15 +2882,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@hyperledger/cactus-common@npm:2.1.0, @hyperledger/cactus-common@workspace:packages/cactus-common":
-  version: 0.0.0-use.local
-  resolution: "@hyperledger/cactus-common@workspace:packages/cactus-common"
+"@hyperledger/cactus-common@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@hyperledger/cactus-common@npm:2.0.0"
   dependencies:
-    "@grpc/grpc-js": "npm:1.11.3"
-    "@types/json-stable-stringify": "npm:1.0.33"
-    "@types/sanitize-html": "npm:2.9.5"
-    "@types/secp256k1": "npm:4.0.3"
-    "@types/uuid": "npm:10.0.0"
     fast-safe-stringify: "npm:2.1.1"
     json-stable-stringify: "npm:1.0.1"
     key-encoder: "npm:2.0.3"
@@ -2829,58 +2895,24 @@ __metadata:
     sanitize-html: "npm:2.12.1"
     secp256k1: "npm:4.0.3"
     sha3: "npm:2.1.4"
-    uuid: "npm:10.0.0"
-  languageName: unknown
-  linkType: soft
+  checksum: 10/8911016a7918b571eb7e4f1342bcb430f0f74dcdde08785407947588fef8c220589c566fc38dc343d3a30a22361fbd92c89acabcae626c6a67e8ae5de2fcfbde
+  languageName: node
+  linkType: hard
 
-"@hyperledger/cactus-core-api@npm:2.1.0, @hyperledger/cactus-core-api@workspace:packages/cactus-core-api":
-  version: 0.0.0-use.local
-  resolution: "@hyperledger/cactus-core-api@workspace:packages/cactus-core-api"
+"@hyperledger/cactus-core-api@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@hyperledger/cactus-core-api@npm:2.0.0"
   dependencies:
-    "@bufbuild/protobuf": "npm:1.10.0"
-    "@connectrpc/connect": "npm:1.4.0"
     "@grpc/grpc-js": "npm:1.11.3"
-    "@grpc/proto-loader": "npm:0.7.13"
-    "@hyperledger/cactus-common": "npm:2.1.0"
-    "@types/express": "npm:5.0.0"
-    "@types/google-protobuf": "npm:3.15.5"
+    "@hyperledger/cactus-common": "npm:2.0.0"
     ajv: "npm:8.17.1"
     ajv-draft-04: "npm:1.0.0"
     ajv-formats: "npm:3.0.1"
     axios: "npm:1.7.7"
     google-protobuf: "npm:3.21.4"
-    grpc-tools: "npm:1.12.4"
-    grpc_tools_node_protoc_ts: "npm:5.3.3"
-    make-dir-cli: "npm:3.1.0"
-    npm-run-all: "npm:4.1.5"
-    rxjs: "npm:7.8.1"
-    socket.io: "npm:4.6.2"
-    typescript-optional: "npm:2.0.1"
-  languageName: unknown
-  linkType: soft
-
-"@hyperledger/cactus-core@workspace:packages/cactus-core":
-  version: 0.0.0-use.local
-  resolution: "@hyperledger/cactus-core@workspace:packages/cactus-core"
-  dependencies:
-    "@hyperledger/cactus-common": "npm:2.1.0"
-    "@hyperledger/cactus-core-api": "npm:2.1.0"
-    "@types/body-parser": "npm:1.19.4"
-    "@types/express": "npm:5.0.0"
-    "@types/http-errors": "npm:2.0.2"
-    body-parser: "npm:1.20.3"
-    express: "npm:4.21.0"
-    express-jwt-authz: "npm:2.4.1"
-    express-openapi-validator: "npm:5.2.0"
-    http-errors: "npm:2.0.0"
-    http-errors-enhanced-cjs: "npm:2.0.1"
-    node-mocks-http: "npm:1.14.0"
-    run-time-error-cjs: "npm:1.4.0"
-    safe-stable-stringify: "npm:2.4.3"
-    typescript-optional: "npm:2.0.1"
-    uuid: "npm:10.0.0"
-  languageName: unknown
-  linkType: soft
+  checksum: 10/c58b377ec94e5d1475cae1bbe08286ad2795abc89f17225af38db40a40db93b401754d5d82aa50fd57fd0759754de1cf1712866cb1393af2368f2fdb82a78c75
+  languageName: node
+  linkType: hard
 
 "@hyperledger/cactus@workspace:.":
   version: 0.0.0-use.local
