@@ -44,7 +44,7 @@ jobs:
       run: env | sort
     - name: lerna-publish
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_TEST }}
         NPM_CONFIG_PROVENANCE: true
       run: |
         git config --global user.email "npm-ci@${{ github.repository_owner }}.org"
