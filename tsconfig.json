@@ -5,9 +5,6 @@
       "path": "./packages/cactus-common/tsconfig.json"
     },
     {
-      "path": "./packages/cactus-core/tsconfig.json"
-    },
-    {
       "path": "./packages/cactus-core-api/tsconfig.json"
     },
   ],
