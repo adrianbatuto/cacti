@@ -1,5 +1,5 @@
 {
-  "name": "@hyperledger/cactus-core",
+  "name": "@adrianbatuto/cactus-core",
   "version": "2.1.0",
   "description": "Contains lower level abstractions/implementation that is to be shared by multiple other, higher level packages of the project.",
   "keywords": [
