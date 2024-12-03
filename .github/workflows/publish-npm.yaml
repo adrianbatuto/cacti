@@ -36,6 +36,7 @@ jobs:
       env:
         DEV_BUILD_DISABLED: false
         FULL_BUILD_DISABLED: true
+        CONFIGURE_DISABLED: true
         JEST_TEST_RUNNER_DISABLED: true
         TAPE_TEST_RUNNER_DISABLED: true
         YARN_ENABLE_IMMUTABLE_INSTALLS: false
