@@ -31,6 +31,11 @@ jobs:
         always-auth: true
         node-version: ${{ env.NODEJS_VERSION }}
         registry-url: 'https://registry.npmjs.org/'
+    - name: Delete yarn.lock file
+      run: |
+        if [ -f yarn.lock ]; then
+          rm yarn.lock
+        fi
     - name: ./tools/ci.sh
       run: ./tools/ci.sh
       env:
