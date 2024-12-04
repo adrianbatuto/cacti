@@ -39,6 +39,8 @@ jobs:
         JEST_TEST_RUNNER_DISABLED: true
         TAPE_TEST_RUNNER_DISABLED: true
         YARN_ENABLE_IMMUTABLE_INSTALLS: false
+    - name: Print
+      run: env | sort
     - name: lerna-publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_TEST }}
