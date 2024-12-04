@@ -9,6 +9,6 @@ test("Error test", async () => {
     const e = new CodedError(message, code);
     return e.sameCode(e);
   };
-
+  console.log("check");
   expect(err(oneMessage, `${oneCode}`)).toBe(true);
 });
