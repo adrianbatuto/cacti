@@ -6,7 +6,7 @@ describe("Bools", () => {
   test("Checks#isBooleanStrict()", () => {
     expect(Bools.isBooleanStrict(true)).toBe(true);
     expect(Bools.isBooleanStrict(false)).toBe(true);
-
+    console.log("checking");
     expect(Bools.isBooleanStrict(0)).not.toBe(true);
     expect(Bools.isBooleanStrict(null)).not.toBe(true);
     expect(Bools.isBooleanStrict(undefined)).not.toBe(true);
