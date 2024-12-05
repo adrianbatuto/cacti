@@ -1,6 +1,6 @@
 {
   "name": "@adrianbatuto/cactus-core-api",
-  "version": "2.1.0-alpha.6",
+  "version": "2.1.0-alpha.7",
   "description": "Contains type definitions/interfaces for the kernel of the codebase. Kept separate from the implementation so that it is easier to use it as a dependency.",
   "keywords": [
     "Hyperledger",
