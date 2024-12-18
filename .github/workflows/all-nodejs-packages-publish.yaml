@@ -63,8 +63,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_TEST }}
           NPM_CONFIG_PROVENANCE: true
         run: |
-          git config --global user.email "npm-ci@${{ github.repository_owner }}.org"
-          git config --global user.name "hyperledger-ghci"
           npm whoami
           yarn lerna publish from-git --yes --loglevel=debug --ignore-scripts
 
