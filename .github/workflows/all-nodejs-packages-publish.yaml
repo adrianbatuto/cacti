@@ -49,9 +49,10 @@ jobs:
         run: ./tools/ci.sh
         env:
           DEV_BUILD_DISABLED: false
-          FULL_BUILD_DISABLED: false
+          FULL_BUILD_DISABLED: true
           JEST_TEST_RUNNER_DISABLED: true
           TAPE_TEST_RUNNER_DISABLED: true
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
 
       - name: Check npm whoami with --registry set to npmjs
         continue-on-error: true
@@ -59,11 +60,9 @@ jobs:
 
       - name: lerna-publish-npm
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_TEST }}
           NPM_CONFIG_PROVENANCE: true
         run: |
-          git config --global user.email "npm-ci@hyperledger.org"
-          git config --global user.name "hyperledger-ghci"
           npm whoami
           yarn lerna publish from-git --yes --loglevel=debug --ignore-scripts
 
@@ -72,39 +71,39 @@ jobs:
       # Reset the .npmrc by deleting it. Invoking the setup-node action again below
       # will set it up from scratch again but with a different registry  configuration
       # so that we can publish to both registries instead of having to choose.
-      - run: rm /home/runner/work/_temp/.npmrc
+      # - run: rm /home/runner/work/_temp/.npmrc
 
-      - uses: actions/setup-node@v4.0.3
-        with:
-          always-auth: true
-          node-version: ${{ env.NODEJS_VERSION }}
-          registry-url: "https://npm.pkg.github.com/"
-          scope: "@hyperledger"
+      # - uses: actions/setup-node@v4.0.3
+      #   with:
+      #     always-auth: true
+      #     node-version: ${{ env.NODEJS_VERSION }}
+      #     registry-url: "https://npm.pkg.github.com/"
+      #     scope: "@hyperledger"
 
-      - run: cat /home/runner/work/_temp/.npmrc
+      # - run: cat /home/runner/work/_temp/.npmrc
 
-      # Re-initialize the registries so that the @iroha2 scope gets configured in .npmrc
-      - run: yarn run init-registries
+      # # Re-initialize the registries so that the @iroha2 scope gets configured in .npmrc
+      # - run: yarn run init-registries
 
-      - run: cat /home/runner/work/_temp/.npmrc
+      # - run: cat /home/runner/work/_temp/.npmrc
 
-      - name: Check npm whoami with no --registry parameter.
-        continue-on-error: true
-        run: npm whoami
+      # - name: Check npm whoami with no --registry parameter.
+      #   continue-on-error: true
+      #   run: npm whoami
 
-      - name: Check npm whoami with --registry set to GHCR
-        continue-on-error: true
-        run: npm whoami --registry=https://npm.pkg.github.com/
+      # - name: Check npm whoami with --registry set to GHCR
+      #   continue-on-error: true
+      #   run: npm whoami --registry=https://npm.pkg.github.com/
 
-      - name: Configure git user and email
-        run: |
-          git config --global user.email "npm-ci@hyperledger.org"
-          git config --global user.name "hyperledger-ghci"
+      # - name: Configure git user and email
+      #   run: |
+      #     git config --global user.email "npm-ci@hyperledger.org"
+      #     git config --global user.name "hyperledger-ghci"
 
-      # We run the publish script a second time after having reconfigured the registry to be GHCR
-      # instead of npmjs.org so that we can publish the packages everywhere.
-      - name: lerna-publish-ghcr
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          yarn lerna publish from-git --yes --loglevel=debug --ignore-scripts
+      # # We run the publish script a second time after having reconfigured the registry to be GHCR
+      # # instead of npmjs.org so that we can publish the packages everywhere.
+      # - name: lerna-publish-ghcr
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: |
+      #     yarn lerna publish from-git --yes --loglevel=debug --ignore-scripts

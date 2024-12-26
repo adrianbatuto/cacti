@@ -35,15 +35,14 @@ jobs:
       run: ./tools/ci.sh
       env:
         DEV_BUILD_DISABLED: false
-        FULL_BUILD_DISABLED: false
+        FULL_BUILD_DISABLED: true
         JEST_TEST_RUNNER_DISABLED: true
         TAPE_TEST_RUNNER_DISABLED: true
+        YARN_ENABLE_IMMUTABLE_INSTALLS: false
     - name: lerna-publish
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_TEST }}
         NPM_CONFIG_PROVENANCE: true
       run: |
-        git config --global user.email "npm-ci@hyperledger.org"
-        git config --global user.name "hyperledger-ghci"
         npm whoami
         yarn lerna publish from-git --yes --loglevel=debug
