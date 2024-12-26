@@ -1,6 +1,6 @@
 {
   "name": "@adrianbatuto/cacti-ledger-browser",
-  "version": "2.1.0-private-public.2",
+  "version": "2.1.0-private-public.3",
   "description": "Cacti GUI for visualizing ledger data build on react.",
   "keywords": [
     "Hyperledger",

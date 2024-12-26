@@ -1,6 +1,6 @@
 {
   "name": "@adrianbatuto/cactus-test-plugin-keychain-memory",
-  "version": "2.1.0-private-public.2",
+  "version": "2.1.0-private-public.3",
   "description": "Tests with API server integration for the dummy keychain implementation. Private package not meant to be released.",
   "keywords": [
     "Hyperledger",
