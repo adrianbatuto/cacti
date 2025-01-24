@@ -1,4 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 group = "org.hyperledger.cactus.plugin.ledger.connector.corda.server"
 version = project.properties["version"]!!
@@ -7,7 +9,7 @@ val corda_release_group = "net.corda"
 val corda_core_release_group =  "net.corda"
 val corda_release_version = "4.12"
 val corda_core_release_version = "4.12"
-val spring_boot_version = "3.3.1"
+val spring_boot_version = "3.4.1"
 val jackson_version = "2.16.1"
 
 tasks.named<Test>("test") {
@@ -21,7 +23,7 @@ buildscript {
         maven { url = uri("https://jitpack.io") }
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:3.3.1")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:3.4.1")
     }
 }
 
@@ -31,20 +33,24 @@ repositories {
     maven { url = uri("https://jitpack.io") }
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
+tasks.withType<KotlinJvmCompile> {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_17)
+    }
 }
 
 plugins {
-    val kotlinVersion = "1.9.24"
+    val kotlinVersion = "2.1.0"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
-    id("org.springframework.boot") version "3.3.1"
+    id("org.springframework.boot") version "3.4.1"
 }
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
+    implementation("org.springframework:spring-core:$spring_boot_version")
+    implementation("org.springframework:spring-context:$spring_boot_version")
     implementation("org.springframework.boot:spring-boot-starter-web:$spring_boot_version")
     implementation("org.springframework.boot:spring-boot-starter-validation:$spring_boot_version")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:$jackson_version")
