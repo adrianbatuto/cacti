@@ -424,6 +424,7 @@ export class PluginLedgerConnectorCorda
   }
 
   public async getFlow(req: GetFlowCidV1Request): Promise<any> {
+    console.log("test");
     try {
       const { headers, agent } = await this.setupRequest(
         req.username,
