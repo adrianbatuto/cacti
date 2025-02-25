@@ -1,4 +1,4 @@
-import { Bools } from "@hyperledger/cactus-common";
+import { Bools } from "@adrianbatuto/cactus-common";
 
 export interface IEndpointAuthzOptions {
   /**

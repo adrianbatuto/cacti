@@ -1,6 +1,6 @@
 {
-  "name": "@hyperledger/cactus-core-api",
-  "version": "2.1.0",
+  "name": "@adrianbatuto/cactus-core-api",
+  "version": "2.1.0-beta.5",
   "description": "Contains type definitions/interfaces for the kernel of the codebase. Kept separate from the implementation so that it is easier to use it as a dependency.",
   "keywords": [
     "Hyperledger",
@@ -60,8 +60,8 @@
     "webpack:dev:web": "webpack --env=dev --target=web --config ../../webpack.config.js"
   },
   "dependencies": {
+    "@adrianbatuto/cactus-common": "^2.1.0-beta.5",
     "@grpc/grpc-js": "1.12.4",
-    "@hyperledger/cactus-common": "2.1.0",
     "ajv": "8.17.1",
     "ajv-draft-04": "1.0.0",
     "ajv-formats": "3.0.1",
